@@ -20,6 +20,7 @@ I am Protyush Nayak''')
 
 print(os.listdir()); # listdir() is a method of the os module that gives the files within the same directory as the
 
+
 # Python for its scope doesn't depend on the braces ( { } ), instead it uses indentation for its scope.
 
 
