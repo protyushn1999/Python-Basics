@@ -157,3 +157,97 @@ print(Dog.animal)
 # Class variables can obviously be accessed using object name also just like other instance variables
 print(tommy.animal)
 
+
+# Static Methods - Static methods are methods that are called without passing the object as an argument.
+
+'''
+class ClassName:
+    def __init__(self, attr1):
+        self.attr1 = attr1
+    
+    def printDetails(self):
+        print("Class Name: ", self.attr1)
+    
+    @staticmethod
+    def greetUser():
+        print("Hello User")
+'''
+
+
+'''********************* Inheritance **********************'''
+
+# Inheritance is a way of creating a new class from an existing class.
+# Base class is the class from which the new class is derived.
+# Derived/Child class is the class which inherits the base class.
+
+# Syntax
+'''
+class Employee:
+     # Class statement
+     # This is the Base Class
+
+
+class Programmer(Employee):
+    # Class statement
+    # This is the Derived Class
+    # It can use all the methods and attributes of the Base Class
+    # It can overwrite and and new attributes and methods in the Programmer Class
+'''
+
+# Single, Multiple, Multilevel and Heicharchical Inheritance
+
+# Single Inheritance
+
+# Base class or Parent class
+class Child:
+
+	# Constructor
+	def __init__(self, name):
+		self.name = name
+
+	def getName(self):
+		return self.name
+
+	def isStudent(self):
+		return False
+
+# Derived class or Child class
+class Student(Child):
+
+	def isStudent(self):    # Changing the method isStudent() to return true value
+		return True
+
+std = Child("Protyush")
+print(std.getName(), std.isStudent())
+std = Student("Aakanksha")
+print(std.getName(), std.isStudent())
+
+
+# Multiple Inheritance
+
+# Base class1
+class Mother:
+	mothername = ""
+	def mother(self):
+		print(self.mothername)
+
+# Base class2
+class Father:
+	fathername = ""
+	def father(self):
+		print(self.fathername)
+
+# Derived class
+class Son(Mother, Father):
+	def parents(self):
+		print("Father :", self.fathername)
+		print("Mother :", self.mothername)
+
+
+s1 = Son()
+s1.parents()
+# changing the name of the father and mother
+s1.fathername = "Saroj"
+s1.mothername = "Jayanti"
+s1.parents()
+
